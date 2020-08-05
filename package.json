@@ -1,8 +1,9 @@
 {
   "name": "get-element-selectors",
   "version": "1.0.0",
-  "description": "Initial commit",
-  "main": "index.js",
+  "description": "Get element CSS selectors",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "test-watch": "jest --watch --config jestconfig.json",
@@ -20,7 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/linsight/get-element-selectors.git"
   },
-  "keywords": [],
+  "keywords": ["css selector", "reverse", "querySelector" ],
   "author": "",
   "license": "MIT",
   "bugs": {
