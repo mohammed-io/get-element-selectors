@@ -3,7 +3,13 @@ import { escapeIdentifierIfNeeded } from './string';
 
 export const isSelectorSettled = (selector: string, element: Element): boolean => {
   const isNthChildSelector = selector.startsWith(':');
-  return !isNthChildSelector && document.querySelector(selector) === element;
+
+  if (isNthChildSelector) {
+    return false;
+  }
+
+  const matchingElements = document.querySelectorAll(selector)
+  return matchingElements.length === 1 && matchingElements[0] === element;
 };
 
 export const getElementClassNames = (element: Element): string[] => {
