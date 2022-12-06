@@ -8,7 +8,7 @@ export const isSelectorSettled = (selector: string, element: Element): boolean =
     return false;
   }
 
-  const matchingElements = document.querySelectorAll(selector)
+  const matchingElements = element.ownerDocument.querySelectorAll(selector)
   return matchingElements.length === 1 && matchingElements[0] === element;
 };
 
